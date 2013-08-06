@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Good Eggs Pickups</title>
+
+  <meta name="description" content="Find Good Eggs pickup locations near you">
+
+  <!-- ios touch icons -->
+  <link rel="apple-touch-icon" href="images/touch-icon-iphone.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/touch-icon-ipad.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/touch-icon-iphone-retina.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="images/touch-icon-ipad-retina.png" />
+
+  <!-- ios web app rules -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <!-- viewport rules -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+  <!-- reset styles -->
+  <link type="text/css" rel="stylesheet" href="styles/vendor/html5reset-1.6.1.css" />
+
+  <!--[if lt IE 9]>
+  <script src="scripts/vendor/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- typekit -->
+  <script type="text/javascript" src="//use.typekit.net/api0pqh.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <!-- script vendor imports -->
+  <script type="text/javascript" src="scripts/vendor/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src="scripts/vendor/modernizr-latest.js"></script>
+  <script type="text/javascript" src="scripts/vendor/handlebars.js"></script>
+  <script type="text/javascript" src="scripts/vendor/orange-event-0.7.js"></script>
+  <script type="text/javascript" src="scripts/vendor/orange-deferred-0.7.js"></script>
+  <script type="text/javascript" src="scripts/vendor/underscore.js"></script>
+
+  <!-- google maps -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoCO-IB56kLEdo6hVDSbA-wT33LKc5Ks8&sensor=true"></script>
+
+  <!-- script imports -->
+  <script type="text/javascript" src="scripts/goodeggs-api.js"></script>
+  <script type="text/javascript" src="scripts/pickups.js"></script>
+
+  <!-- stylesheet imports -->
+  <link type="text/css" rel="stylesheet" href="styles/pickups.css" />
+
+</head>
+
+<body lang="en">
+
+  <header id="page-header">
+    <div class="page-title">
+      <h1>Good Eggs Pickups</h1>
+      <div class="page-subtitle">Our mission is to grow and sustain local food systems worldwide.</div>
+    </div>
+    <div id="logo"></div>
+  </header>
+
+  <nav id="location-menu" class="inactive">
+
+    <ul class="navigation">
+      <li class="navigation-item" data-id="sfbay">San Francisco</li>
+      <li class="navigation-item" data-id="nyc">New York City</li>
+      <li class="navigation-item" data-id="la">Los Angeles</li>
+      <li class="navigation-item" data-id="nola">New Orleans</li>
+    </ul>
+
+  </nav>
+
+  <section id="lookup-form">
+
+    <h2 class="lookup-form-title">Find Pickups In <span class="location-field">San Francisco</span></h2>
+
+    <form name="search">
+
+      <div class="search-form">
+
+        <div class="field-title zip-title">Find By Zipcode</div>
+
+        <input id="zipcode-field" type="text" name="zipcode" placeholder="ex. 10036" autocomplete="off"  />
+        <div class="error-text zipcode-error hidden">You must enter a valid zipcode</div>
+
+        <div class="field-title time-title">When Can You Pickup?</div>
+
+        <ul class="time-chooser">
+          <li class="time-chooser-item" data-min="0" data-max="14">Before 2pm</li>
+          <li class="time-chooser-item" data-min="14" data-max="15">2:00pm - 3:00pm</li>
+          <li class="time-chooser-item" data-min="15" data-max="16">3:00pm - 4:00pm</li>
+          <li class="time-chooser-item" data-min="16" data-max="17">4:00pm - 5:00pm</li>
+          <li class="time-chooser-item" data-min="17" data-max="18.5">5:00pm - 6:30pm</li>
+          <li class="time-chooser-item" data-min="18.5" data-max="24">After 6:30pm</li>
+        </ul>
+
+        <div class="error-text times-error hidden">You must choose at least one pickup time.</div>
+
+        <div class="error-text hidden">Could not find results</div>
+
+      </div>
+
+      <input type="button" id="lookup-btn" value="Search" />
+
+    </form>
+
+  </section>
+
+  <section id="lookup-list" class="hidden">
+
+    <header class="lookup-list-header">
+      <div class="back-btn">Back</div>
+      <h2 class="lookup-list-title">Locations</h2>
+      <!--<input class="map-btn" type="button" value="Map" />-->
+    </header>
+
+    <ul class="location-list"></ul>
+
+    <div class="error-message"></div>
+
+  </section>
+
+  <section id="lookup-map" class="hidden">
+
+    <div class="close-btn">Close</div>
+
+  </section>
+
+  <footer id="page-footer">
+      <p>Copyright &copy 2013. Kevin Kinnebrew for Good Eggs.</p>
+  </footer>
+
+</body>
+
+</html>
