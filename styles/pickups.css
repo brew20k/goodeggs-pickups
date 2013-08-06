@@ -142,10 +142,10 @@ h1 {
   -moz-border-radius: 4px;
   border-radius: 4px;
 
-  -webkit-transition: background 200ms ease-in-out;
-  -moz-transition: background 200ms ease-in-out;
-  -o-transition: background 200ms ease-in-out;
-  transition: background 200ms ease-in-out;
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 
 html.no-touch .navigation-item:hover, .navigation-item.selected {
@@ -168,11 +168,11 @@ html.no-touch .navigation-item:hover, .navigation-item.selected {
 @media screen and (max-width: 530px) {
 
   #location-menu {
-    height: 186px;
-    padding-bottom: 20px;
+    height: 205px;
   }
 
   .navigation {
+    margin-bottom: 20px;
     width: 100%;
   }
 
@@ -195,7 +195,6 @@ html.no-touch .navigation-item:hover, .navigation-item.selected {
 
 #location-menu.inactive {
   height: 0;
-  padding-bottom: 0;
 }
 
 /* lookup form */

@@ -126,8 +126,6 @@
 
     e.stopPropagation();
 
-    console.log(123);
-
     this.target.find('li').removeClass('selected');
     $(e.currentTarget).addClass('selected');
 
