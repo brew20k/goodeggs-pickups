@@ -332,6 +332,14 @@ input[type="text"]:focus {
   box-shadow: 0px 0px 4px rgba(0, 158, 179, 0.66);
 }
 
+input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+input:-moz-placeholder {
+  text-align: center;
+}
+
 /**
 input[type="number"]:invalid {
   border-color: #b94a48;
