@@ -91,7 +91,7 @@ h1 {
 
 }
 
-@media screen and (max-width: 480px), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 
   #logo {
     background-image: url(../images/logo_small@2x.png);
