@@ -575,6 +575,15 @@ html.no-touch .time-chooser-item:hover {
 
 }
 
+.dow {
+  background: #007084;
+  color: #FFF;
+  padding: 3px 5px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
 /* lookup map */
 
 #lookup-map {

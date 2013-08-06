@@ -409,10 +409,22 @@
 
     });
 
+    var uniques = {};
+
+    _.each(locations, function(location) {
+      var key = location.name.trim() + formatTime(location.pickupStart) + formatTime(location.pickupEnd);
+      if (uniques.hasOwnProperty(key)) {
+        uniques[key].nextDate = location.pickupStart;
+      } else {
+        location.nextDate = location.pickupStart;
+        uniques[key] = location;
+      }
+    });
+
     list.empty();
 
     if (locations.length === 0) {
-      list.append('<li class="no-results">Sorry, no pickups by you. Try our delivery instead.</li>')
+      list.append('<li class="no-results">Sorry, no pickup locations found for this week, within 20 miles.</li>')
     }
 
     for (var i = 0; i < locations.length; i++) {
