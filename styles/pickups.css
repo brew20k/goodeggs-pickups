@@ -92,7 +92,7 @@ h1 {
 }
 
 @media screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-
+  
   #logo {
     background-image: url(../images/logo_small@2x.png);
     -webkit-background-size: 58px 48px;
@@ -326,12 +326,15 @@ input[type="number"]:focus {
   box-shadow: 0px 0px 4px rgba(0, 158, 179, 0.66);
 }
 
+/**
 input[type="number"]:invalid {
   border-color: #b94a48;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
+
+**/
 
 #lookup-btn {
   background: #007084;
