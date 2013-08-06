@@ -148,7 +148,7 @@ h1 {
   transition: all 100ms ease-in-out;
 }
 
-html.no-touch .navigation-item:hover, .navigation-item.selected {
+html.no-touch .navigation-item:hover, .navigation-item.selected, .navigation-item:active {
   background: #007084;
   color: #FFF;
 }
