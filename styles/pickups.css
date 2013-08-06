@@ -300,7 +300,7 @@ html.no-touch .location-field:hover, .location-field:active {
   margin-top: 16px;
 }
 
-input[type="number"] {
+input[type="text"] {
   border: 1px solid #CCC;
   display: block;
   font-size: 18px;
@@ -319,7 +319,7 @@ input[type="number"] {
   border-radius: 4px;
 }
 
-input[type="number"]:focus {
+input[type="text"]:focus {
   border: 1px solid #009EB3;
   -webkit-box-shadow: 0px 0px 4px rgba(0, 158, 179, 0.66);
   -moz-box-shadow: 0px 0px 4px rgba(0, 158, 179, 0.66);
