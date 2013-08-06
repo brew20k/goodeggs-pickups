@@ -93,12 +93,15 @@
     this.target = $(target);
     this.location = location;
 
+    var isDesktop = $('html').hasClass('no-touch');
+
     this.target.find('[data-id="' + location + '"]').addClass('selected');
 
-    this.target.find('.navigation').on('click', 'li', $.proxy(this.onClick, this));
+    this.target.find('.navigation').on((isDesktop ? 'click' : 'touchend'), 'li', $.proxy(this.onClick, this));
     this.target.find('.navigation').on('click', function(e) {
       e.stopPropagation();
     });
+
   }
 
   /**
