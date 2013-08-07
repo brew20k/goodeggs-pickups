@@ -9,6 +9,8 @@
     'sfbay': []
   };
 
+  var SEARCH_RANGE = 6;
+
   function printDate(day) {
 
     var formatted = day.getFullYear() + '-';
@@ -73,11 +75,14 @@
     var today = new Date();
     var later = new Date();
 
-    later.setDate(today.getDate() + 6);
+    later.setDate(today.getDate() + SEARCH_RANGE);
 
     function success(data) {
       var results = [], location;
       for (var i = 0; i < data.length; i++) {
+        if (data[i].location.name === 'Financial District') {
+          console.log(data[i]);
+        }
         if (!data[i].delivery && data[i].requiredUserFeature === undefined) {
           location = new Location(data[i]);
           if (location.pickupStart < later) {
